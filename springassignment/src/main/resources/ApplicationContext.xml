@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:context="http://www.springframework.org/schema/context"
+        xsi:schemaLocation="
+http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/context
+ http://www.springframework.org/schema/context/spring-context.xsd">
+		
+		<context:annotation-config/>
+		<!-- Setter injection -->
+      <bean id="p" class="springassignment.model.Person">
+
+              <property name = "firstName" value = "Marc" />
+				<property name="lastName"  value="Spector"/>
+      </bean>   
+      
+      
+      <!-- Constructor injection -->  
+              <bean id="cat1" class="springassignment.model.Cat">
+
+              <constructor-arg index="0" value="White"/>
+              <constructor-arg index="1" value="Street"/>
+        
+              
+      </bean>   
+
+
+	              <bean id="dog1" class="springassignment.model.Dog">
+
+              <constructor-arg index="0" value="Brown"/>
+              <constructor-arg index="1" value="Golden Retriever"/>
+        
+              
+      </bean> 
+                    <bean id="a" class="springassignment.model.Animal">
+
+              <constructor-arg index="0" value="123"/>
+              <constructor-arg index="1" value="Elephant"/>
+        		<constructor-arg index="2" value="Black"/>
+              
+      </bean> 
+      <bean id="person1" class="springassignment.model.Person">
+
+              <constructor-arg index="0" value="Jack"/>
+              <constructor-arg index="1" value="Black"/>
+        		
+              
+      </bean> 
+      
+
+ </beans>
